@@ -6,7 +6,7 @@
         </head>
         <body>
             <h1>SUPER JAJA</h1>
-            <form action="index.php" method="POST">
+            <form action="country.php" method="POST">
                 Name: <input type="text" name="name"><br>
                 <p><input type="submit" name="submit" value="submit" /></p>
             </form>
@@ -29,13 +29,15 @@
                 echo "$sql";
                 echo "<br>";
                 if ($conn->query($sql) === TRUE) {
-                echo "New record created successfully";
+                echo "New country created successfully";
                 } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
                 }
                 $conn->close();
             }
-            echo "<br>";
-            $query = $mysqli->query("SELECT * FROM countries"); 
         ?>
+        <body>
+            <br>
+            <a href="index.php">Back to Menu</a>
+        </body>
     </html>
