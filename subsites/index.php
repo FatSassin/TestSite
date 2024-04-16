@@ -13,5 +13,7 @@
                 <li> <a href="guns.php">Adding Guns</a>
                 <li> <a href="produc.php">Adding Producents</a>
                 <li> <a href="review.php">Adding Reviews</a>
+                <li> <a href="type.php">Adding Gun Types</a>
+                <li> <a href="caliber.php">Adding Diffrent Calibers</a>
             </ul>
         </body>

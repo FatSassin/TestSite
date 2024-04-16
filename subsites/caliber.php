@@ -6,8 +6,8 @@
         </head>
         <body>
             <h1>SUPER JAJA</h1>
-            <form action="country.php" method="POST">
-                Name: <input type="text" name="name"><br>
+            <form action="caliber.php" method="POST">
+                Caliber: <input type="text" name="name"><br>
                 <p><input type="submit" name="submit" value="submit" /></p>
             </form>
         </body>
@@ -24,11 +24,11 @@
             if (isset( $_POST['name'])){
 
                 $name = $_POST['name'];
-                $sql = "INSERT INTO countries (name) VALUES (\"".$name."\")";
+                $sql = "INSERT INTO caliber (name) VALUES (\"".$name."\")";
 
                 echo "<br>";
                 if ($conn->query($sql) === TRUE) {
-                echo "New country created successfully";
+                echo "New caliber added successfully";
                 } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
                 }
