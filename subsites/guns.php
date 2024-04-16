@@ -2,12 +2,19 @@
 
 	// polaczenie z bazą danych
 	$con = mysqli_connect("localhost","root","","gunsitedotpng");
+    mysqli_set_charset($con, "utf8");
 	
 	// mysqli_connect("servername","username","password","database_name")
 
 	// wez wszystkie dane z tabeli caliber, producenci i typbron
 	$sql = "SELECT * FROM `caliber`";
 	$all_categories = mysqli_query($con,$sql);
+
+    $sql = "SELECT * FROM `producenci`";
+	$all_producenci = mysqli_query($con,$sql);
+
+    $sql = "SELECT * FROM `typbron`";
+	$all_types = mysqli_query($con,$sql);
 
 	//ten kod sprawdza czy przycisk submit zostal wcisniety
 	// i insertuje dane do tabeli
@@ -52,8 +59,6 @@
         <form method="POST">
             <label>Name:</label>
             <input type="text" name="name" required><br>
-            <label>Password:</label>
-            <input type="text" name="password" required><br>
 
 
 
@@ -88,7 +93,7 @@
                     // ze zmiennej $all_categories 
                     // i pokazuje je osobno na liście
                     while ($prod = mysqli_fetch_array(
-                            $all_categories,MYSQLI_ASSOC)):; 
+                            $all_producenci,MYSQLI_ASSOC)):; 
                 ?>
                     <option value="<?php echo $prod["producent_id"];
                         //Tu dajesz primary key tego co ma być na liście do wybrania
@@ -112,7 +117,7 @@
                     // ze zmiennej $all_categories 
                     // i pokazuje je osobno na liście
                     while ($typb = mysqli_fetch_array(
-                            $all_categories,MYSQLI_ASSOC)):; 
+                            $all_types,MYSQLI_ASSOC)):; 
                 ?>
                     <option value="<?php echo $typb["type_id"];
                         //Tu dajesz primary key tego co ma być na liście do wybrania
