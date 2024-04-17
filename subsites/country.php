@@ -5,8 +5,7 @@
             <meta charset="utf-8">
         </head>
         <body>
-            <h1>SUPER JAJA</h1>
-            <form action="country.php" method="POST">
+            <form method="POST">
                 Name: <input type="text" name="name"><br>
                 <p><input type="submit" name="submit" value="submit" /></p>
             </form>
@@ -29,8 +28,4 @@
                 $conn->close();
             }
         ?>
-        <body>
-            <br>
-            <a href="index.php">Back to Menu</a>
-        </body>
     </html>

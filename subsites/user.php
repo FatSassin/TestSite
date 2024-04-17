@@ -75,7 +75,5 @@
             <br>
             <input type="submit" value="submit" name="submit">
         </form>
-        <br>
-        <a href="index.php">Back to Menu</a>
     </body>
 </html>
