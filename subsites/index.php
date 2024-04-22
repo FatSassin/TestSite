@@ -30,6 +30,9 @@
                 if (isset($_GET["produc"])){
                     include "produc.php";
                 }
+                if (isset($_GET["review"])){
+                    include "review.php";
+                }
                 if (isset($_GET["type"])){
                     include "type.php";
                 }
