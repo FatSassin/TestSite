@@ -3,6 +3,7 @@
         <head>
             <title>menu</title>
             <meta charset="utf-8">
+            <link rel="stylesheet" href="gunsite.css">
         </head>
         <body>
             <h1>Main Menu</h1>

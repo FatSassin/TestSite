@@ -101,10 +101,11 @@
             </select>
             <br>
             <label>Write the review:</label>
-            <input type="text" name="text" required><br>
+            <br>
+            <input type="text" name="text" class="mytext" required><br>
 
-            <label>Rating:</label>
-            <input type="number" name="ocena" maxlength="1" required><br>
+            <label>Rating from 1 to 10:</label>
+            <input type="number" name="ocena" min="1" max="10" required><br>
 
             <input type="submit" value="submit" name="submit">
         </form>
