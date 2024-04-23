@@ -1,5 +1,9 @@
 .mytext {
     width: 300px;
     height: 100px;
+<<<<<<< HEAD
     flex-wrap: wrap;
+=======
+    word-wrap: normal;
+>>>>>>> 21456d4f49e96481e5bfb36890c800f6a9176407
 }

@@ -102,8 +102,12 @@
             <br>
             <label>Write the review:</label>
             <br>
+<<<<<<< HEAD
             <textarea placeholder="chrzascz brzmi w szczebrzeysznie w kaszanie" type="text" name="text" class="mytext" required></textarea>
             <br>
+=======
+            <input type="text" name="text" class="mytext" required><br>
+>>>>>>> 21456d4f49e96481e5bfb36890c800f6a9176407
 
             <label>Rating from 1 to 10:</label>
             <input type="number" name="ocena" min="1" max="10" required><br>
