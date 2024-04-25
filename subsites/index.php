@@ -18,6 +18,10 @@
                 <li> <a href="index.php?type">Adding Gun Types</a>
                 <li> <a href="index.php?caliber">Adding Diffrent Calibers</a>
             </ul>
+            <h2>See database data:</h2>
+            <ul>
+                <li> <a href="index.php?showreview">See reviews</a>
+            </ul>
             <?php 
                 if (isset($_GET["country"])){
                     include "country.php";
@@ -40,5 +44,8 @@
                 if (isset($_GET["caliber"])){
                     include "caliber.php";
                 }  
+                if (isset($_GET["showreview"])){
+                    include "showreview.php";
+                } 
             ?>
         </body>
