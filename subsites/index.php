@@ -19,7 +19,7 @@
                 <li> <a href="index.php?type">Adding Gun Types</a>
                 <li> <a href="index.php?caliber">Adding Diffrent Calibers</a>
             </ul>
-            <h2>See database data:</h2>
+            <h2>Database:</h2>
             <ul>
                 <li> <a href="index.php?showreview">See Reviews</a>
                 <li> <a href="index.php?showguns">See Weapons Database</a>
