@@ -4,6 +4,7 @@
             <title>menu</title>
             <meta charset="utf-8">
             <link rel="stylesheet" href="gunsite.css">
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         </head>
         <body>
             <h1>Main Menu</h1>
@@ -20,7 +21,8 @@
             </ul>
             <h2>See database data:</h2>
             <ul>
-                <li> <a href="index.php?showreview">See reviews</a>
+                <li> <a href="index.php?showreview">See Reviews</a>
+                <li> <a href="index.php?showguns">See Weapons Database</a>
             </ul>
             <?php 
                 if (isset($_GET["country"])){
@@ -46,6 +48,9 @@
                 }  
                 if (isset($_GET["showreview"])){
                     include "showreview.php";
+                } 
+                if (isset($_GET["showguns"])){
+                    include "showguns.php";
                 } 
             ?>
         </body>
