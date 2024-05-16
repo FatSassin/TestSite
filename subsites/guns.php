@@ -32,11 +32,15 @@
         // zapisuje typ do zmiennej $typb
 		$typb = mysqli_real_escape_string($con,$_POST['typbroni']); 
 		
+        // zapisuje username z forms do zmiennej $name
+		$img = mysqli_real_escape_string($con,$_POST['img']);
+
+
 		// tworzy zapytanie wstawiania danych do tabeli przy uzyciu SQL
 		// i magazynuje je w zmiennej
 		$sql_insert = 
-		"INSERT INTO `bron`(`name`, `caliber`, `producent_id`, `type_id`)
-			VALUES ('$name','$calib','$prod','$typb')";
+		"INSERT INTO `bron`(`name`, `caliber`, `producent_id`, `type_id`, `img`)
+			VALUES ('$name','$calib','$prod','$typb', '$img')";
 		
 		// ten kod zamierza wykonać wstawanie danych powyżej na serio
 		// jeżeli nie ma errorów
@@ -52,7 +56,7 @@
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
-        <meta name="users"
+        <meta name="guns"
             content="width=device-width, initial-scale=1.0"> 
     </head>
     <body>
@@ -130,9 +134,12 @@
                     endwhile; 
                     //Petla while sie zabija
                 ?>
+
             </select>
             <br>
-
+            <label>Upload a picture of the gun</label>
+            <input type="file" id="img" name="img" accept="image/png, image/jpeg, image/jpg">
+            <br>
 
 
             <input type="submit" value="submit" name="submit">
