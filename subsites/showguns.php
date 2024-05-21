@@ -14,7 +14,7 @@
     FROM bron 
     JOIN caliber ON caliber.cal_id = bron.caliber 
     JOIN producenci ON producenci.producent_id = bron.producent_id 
-    JOIN typbron ON typbron.type_id = bron.type_id";
+    JOIN typbron ON typbron.type_id = bron.type_id ORDER BY gun_id";
 
 
     echo '<table border="0" cellspacing="2" cellpadding="2"> 
