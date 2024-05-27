@@ -41,6 +41,7 @@
         <meta charset="UTF-8">
         <meta name="prod"
             content="width=device-width, initial-scale=1.0"> 
+        <link href="SheetStyle.css" rel="stylesheet">
     </head>
     <body>
         <form method="POST">
