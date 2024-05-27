@@ -1,29 +1,115 @@
 <!DOCTYPE html>
-    <html>
+    <html class="color">
         <head>
             <title>menu</title>
             <meta charset="utf-8">
-           
+            <link href="SheetStyle52.css" type="stylesheet">
             <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+            <style> 
+            body{ 
+                color: black;
+                font-family: "Comic Sans MS";
+                font-size: 15px;
+            }
+
+            header {
+                font-family: Arial;
+                text-align: center;
+                background-color: yellow;
+                font-size: 30px;
+                width: 100%;
+
+            }
+            main {
+                background-color: blue;
+                width: 80%;
+                margin: auto;
+                text-align: center;
+            }
+            footer {
+                text-align: center;
+                background-color: red;
+                width: 100%;
+                margin: auto;
+            }
+            @keyframes example {
+                0%   {background-color: red;}
+                25%  {background-color: yellow;}
+                38%  {background-color: crimson;}
+                50%  {background-color: blue;}
+                67%  {background-color: cyan;}
+                75%	 {background-color: blueviolet;}
+                100% {background-color: green;}
+            }
+            .color {
+                animation-name: example;
+                animation-duration: 1s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+            .right_header {
+                animation: rotation 2s infinite linear;
+                position: relative;
+                float: right;
+                right: 20%;
+                top: 20%;
+            }
+            @keyframes rotation {
+                from {
+                transform: rotate(0deg);
+                }
+                to {
+                transform: rotate(359deg);
+                }
+            }
+            @keyframes rotationL {
+                from {
+                transform: rotate(359deg);
+                }
+                to {
+                transform: rotate(0deg);
+                }
+            }
+            .left_header {
+                animation: rotationL 2s infinite linear;
+                position: relative;
+                float: left;
+                left: 100px;
+                top: 100px;
+                border: 3px solid #73AD21;
+            }
+            .image-hover {
+                width: 300px; /* Specify the width */
+                height: 200px; /* Specify the height */
+                background-image: url('path6.png'); /* Initial background image */
+                background-size: cover; /* Cover the entire area of the element */
+                transition: background-image 0.5s ease-in-out; /* Smooth transition */
+            }
+
+            .image-hover:hover {
+                background-image: url('path6_1.png'); /* Change on hover */
+            }
+            </style>
         </head>
         <body>
-            <h1>Main Menu</h1>
-            <h2>Navigation:</h2>
-            <ul>
-                <li> <a href="index.php">Main Site</a>
-                <li> <a href="index.php?country">Adding Countries</a>
-                <li> <a href="index.php?user">Adding Users</a>
-                <li> <a href="index.php?guns">Adding Guns</a>
-                <li> <a href="index.php?produc">Adding Producents</a>
-                <li> <a href="index.php?review">Adding Reviews</a>
-                <li> <a href="index.php?type">Adding Gun Types</a>
-                <li> <a href="index.php?caliber">Adding Diffrent Calibers</a>
-            </ul>
-            <h2>Database:</h2>
-            <ul>
-                <li> <a href="index.php?showreview">See Reviews</a>
-                <li> <a href="index.php?showguns">See Weapons Database</a>
-            </ul>
+                <h1>Main Menu</h1>
+                <h2>Navigation:</h2>
+                <p class="right_header"><img src="wolwo.png" width="400"></p>
+                <ul>
+                    <li> <a href="index.php"> <p class="image-hover"></p></a>
+                    <li> <a href="index.php?country">Adding Countries</a>
+                    <li> <a href="index.php?user">Adding Users</a>
+                    <li> <a href="index.php?guns">Adding Guns</a>
+                    <li> <a href="index.php?produc">Adding Producents</a>
+                    <li> <a href="index.php?review">Adding Reviews</a>
+                    <li> <a href="index.php?type">Adding Gun Types</a>
+                    <li> <a href="index.php?caliber">Adding Diffrent Calibers</a>
+                </ul>
+                <h2>Database:</h2>
+                <ul>
+                    <li> <a href="index.php?showreview">See Reviews</a>
+                    <li> <a href="index.php?showguns">See Weapons Database</a>
+                </ul>
             <?php 
                 if (isset($_GET["country"])){
                     include "country.php";
