@@ -3,7 +3,7 @@
         <head>
             <title>Gunsitedotnet</title>
             <meta charset="utf-8">
-            <link href="SheetStyle.css" rel="stylesheet">
+            
         </head>
         <body>
             <form method="POST">
