@@ -11,7 +11,7 @@
                 font-size: 15px;
             }
             @keyframes example {
-                0%   {background-color: red;}
+                0%   {background-image: url("png.jpg");}
                 25%  {background-color: yellow;}
                 38%  {background-color: crimson;}
                 50%  {background-color: blue;}
@@ -21,9 +21,16 @@
             }
             .color {
                 animation-name: example;
-                animation-duration: 1s;
+                animation-duration: 0.5s;
                 animation-direction: alternate;
                 animation-iteration-count: infinite;
+                 /* Full height */
+                height: 100%;
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
             .right_header {
                 animation: rotation 2s infinite linear;
@@ -67,6 +74,7 @@
             .image-hover:hover {
                 background-image: url('path6_1.png'); /* Change on hover */
             }
+           
             </style>
         </head>
         <body>
