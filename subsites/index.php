@@ -11,7 +11,9 @@
                 font-size: 15px;
             }
             @keyframes example {
-                0%   {background-image: url("png.jpg");}
+                0%   {background-color: red;}
+                10%  {background-image: url("png.jpg");}
+                15%  {background-color: orange;}
                 25%  {background-color: yellow;}
                 38%  {background-color: crimson;}
                 50%  {background-color: blue;}
@@ -21,7 +23,7 @@
             }
             .color {
                 animation-name: example;
-                animation-duration: 0.5s;
+                animation-duration: 0.02s;
                 animation-direction: alternate;
                 animation-iteration-count: infinite;
                  /* Full height */
